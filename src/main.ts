@@ -1,3 +1,7 @@
+
+import 'beercss'
+import 'lib-opal/lib/util.css'
+/* color scheme: 瑾瑜 #1E2732 */
 import './assets/main.css'
 
 import { createApp } from 'vue'
