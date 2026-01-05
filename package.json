@@ -16,6 +16,7 @@
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
+		"@ant-design/icons-vue": "^7.0.1",
 		"axios": "^1.13.2",
 		"beercss": "^3.13.1",
 		"lib-opal": "^0.5.0",
@@ -33,6 +34,7 @@
 		"vite": "^7.2.4",
 		"vite-plugin-vue-devtools": "^8.0.5",
 		"vue-tsc": "^3.1.5",
-		"wrangler": "^4.54.0"
+		"wrangler": "^4.54.0",
+        "@firok-arc-project/arc-centrifuge": "^0.6.0"
 	}
 }

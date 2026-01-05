@@ -1,22 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import PageIndex from '@/components/PageIndex.vue'
+import PageHomepage from '@/components/page-homepage/PageHomepage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: PageIndex,
+      name: 'homepage',
+      component: PageHomepage,
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue'),
-    // },
+    {
+      path: '/library',
+      name: 'library',
+      component: () => import('@/components/page-library/PageLibrary.vue'),
+    },
+    {
+      path: '/port',
+      name: 'port',
+      component: () => import('@/components/page-port/PagePort.vue'),
+    },
+    {
+      path: '/archives/_doc-id',
+      name: 'document',
+      component: () => import('@/components/page-document/PageDocument.vue'),
+    },
   ],
 })
 
