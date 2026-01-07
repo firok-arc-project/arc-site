@@ -13,6 +13,9 @@
 		"build-only": "vite build",
 		"type-check": "vue-tsc --build",
 		"deploy": "npm run build && wrangler deploy",
+        "fetch-material": "git clone https://github.com/firok-arc-project/arc-material.git",
+        "build-material": "node node_modules/@firok-arc-project/arc-centrifuge/dist/index.js arc-material/docs/meta-config.json5",
+        "copy-material": "cp -r arc-material/docs/dist/* public/docs",
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
@@ -35,6 +38,7 @@
 		"vite-plugin-vue-devtools": "^8.0.5",
 		"vue-tsc": "^3.1.5",
 		"wrangler": "^4.54.0",
-        "@firok-arc-project/arc-centrifuge": "^0.6.0"
+        "@firok-arc-project/arc-centrifuge": "^0.6.0",
+        "@firok-arc-project/arc-connector": "^0.2.0"
 	}
 }
