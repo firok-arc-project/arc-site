@@ -13,12 +13,7 @@
 		"build-only": "vite build",
 		"type-check": "vue-tsc --build",
 		"deploy": "npm run build && wrangler deploy",
-        "fetch-material": "git clone https://github.com/firok-arc-project/arc-material.git",
-        "build-material": "node node_modules/@firok-arc-project/arc-centrifuge/dist/index.js arc-material/docs/meta-config.json5",
-        "copy-material": "cp -r arc-material/docs/dist/* public/docs",
-        "clean-material": "node script-clean-material.js",
-		"cf-typegen": "wrangler types",
-        "deploy-local": "npm run fetch-material && npm run build-material && npm run copy-material && npm run clean-material && npm run deploy"
+		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
 		"@ant-design/icons-vue": "^7.0.1",
