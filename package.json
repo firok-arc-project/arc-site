@@ -35,7 +35,7 @@
 		"vite-plugin-vue-devtools": "^8.0.5",
 		"vue-tsc": "^3.1.5",
 		"wrangler": "^4.54.0",
-        "@firok-arc-project/arc-centrifuge": "^0.6.0",
+        "@firok-arc-project/arc-centrifuge": "^0.9.0",
         "@firok-arc-project/arc-connector": "^0.2.0"
 	}
 }

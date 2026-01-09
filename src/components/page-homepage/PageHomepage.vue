@@ -5,7 +5,7 @@ a.link > i {
 </style>
 
 <template>
-  <main class="responsive center-align middle-align blur">
+  <main class="responsive center-align middle-align">
 
     <article class="fill medium-width medium-elevate">
       <div class="row">
