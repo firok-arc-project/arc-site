@@ -19,6 +19,11 @@
           </div>
 
           <marked-area :content="data.docContent ?? 'empty'" safe>
+            <template #image="{ href, title, }">
+              <div>
+                <img :src="resolve(href)" :alt="title">
+              </div>
+            </template>
           </marked-area>
         </div>
       </template>
@@ -77,8 +82,8 @@ async function loadDoc(docId: string | null)
 
         const mf: matter.GrayMatterFile<DocMeta> = matter(docContent)
 
-        const pathBase = `${location.protocol}//${location.host}${ajaxBaseUrlDoc}`
-        const docPath = new URL(docMeta.pathRelative, pathBase)
+        const pathDocRelative = docMeta.pathRelative
+        const docPath = new URL(`${location.protocol}//${location.host}${ajaxBaseUrlDoc}/${pathDocRelative}`)
 
         return {
           docMeta: mf.data,
@@ -87,6 +92,13 @@ async function loadDoc(docId: string | null)
         }
       },
   )
+}
+
+function resolve(relativePath: string): string
+{
+  console.log('resolve uri', relativePath, dataDocData.value.data.docPath)
+  const url = new URL(relativePath, dataDocData.value.data.docPath)
+  return url.toString()
 }
 
 const route = useRoute()
