@@ -20,7 +20,7 @@ const router = createRouter({
       component: () => import('@/components/page-port/PagePort.vue'),
     },
     {
-      path: '/archives/_doc-id',
+      path: '/archives/:docId',
       name: 'document',
       component: () => import('@/components/page-document/PageDocument.vue'),
     },

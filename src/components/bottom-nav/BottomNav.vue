@@ -33,8 +33,12 @@ async function go(type: NavType): Promise<void>
   })
 }
 
+const setLibActive = new Set<string>()
+setLibActive.add('document')
+setLibActive.add('library')
+
 const isHomepageActive = computed(() => route.path === '/')
-const isLibraryActive = computed(() => route.path === '/library') // todo
+const isLibraryActive = computed(() => setLibActive.has(route.name as unknown as string)) // todo
 const isPortActive = computed(() => route.path === '/port')
 
 </script>

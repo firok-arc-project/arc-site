@@ -44,6 +44,8 @@ export async function loadAsync<TypeEntity>(
   }
   catch(any)
   {
+    console.error(any)
+
     if(ref.value.requestId !== requestId)
       return
 

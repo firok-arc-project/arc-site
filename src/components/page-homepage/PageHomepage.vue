@@ -5,9 +5,11 @@ a.link > i {
 </style>
 
 <template>
-  <main class="responsive center-align middle-align">
+  <main class="responsive">
+    
+    <div class="space"></div>
 
-    <article class="fill medium-width medium-elevate">
+    <article class="primary medium-width medium-elevate center">
       <div class="row">
         <div class="center-align left-margin">
           <img class="round extra border tertiary-border"
@@ -31,74 +33,80 @@ a.link > i {
               虽然不知道你是从哪找到这破地方的, 总之欢迎你
             </div>
           </div>
-
-          <hr class="vertical-margin">
-
-          <div class="small-padding horizontal-padding">
-            <div>
-              还可以在这里找到我:
-            </div>
-
-            <div class="tiny-space"></div>
-
-            <div>
-              <a class="link"
-                 href="mailto:firok@qq.com"
-                 target="_blank">
-                <i class="tiny">
-                  <mail-outlined/>
-                </i>
-                E-Mail
-              </a>
-            </div>
-
-            <div>
-              <a class="link"
-                 href="tencent://message/?uin=351768593&Site=&Menu=yes"
-                 target="_blank">
-                <i class="tiny">
-                  <qq-circle-filled/>
-                </i>
-                QQ
-              </a>
-            </div>
-
-            <div>
-              <a class="link"
-                 href="https://github.com/FirokOtaku"
-                 target="_blank">
-                <i class="tiny">
-                  <github-filled/>
-                </i>
-                GitHub
-              </a>
-            </div>
-
-            <div>
-              <a class="link"
-                 href="https://steamcommunity.com/id/s2lab_firok/"
-                 target="_blank">
-                <i class="tiny" v-html="SteamSvg.default">
-                </i>
-                Steam
-              </a>
-            </div>
-
-            <div class="tiny-space"></div>
-          </div>
-
-          <hr>
-
-          <div class="small-padding">
-            <a href="https://icp.gov.moe/?keyword=20231551">
-              <div class="small-text">
-                <img class="tiny" src="/moe-icp-mark.png" alt="Moe ICP logo">
-                萌ICP备20231551号
-              </div>
-            </a>
-          </div>
         </div>
       </div>
+
+    </article>
+
+    <article class="fill medium-width medium-elevate center">
+      <div class="small-padding horizontal-padding">
+        <div class="small-text center-align">
+          还可以在这里找到我
+        </div>
+
+        <div class="tiny-space"></div>
+
+        <div class="small-width center">
+          <a class="link"
+             href="mailto:firok@qq.com"
+             target="_blank">
+            <i class="tiny">
+              <mail-outlined/>
+            </i>
+            E-Mail
+          </a>
+        </div>
+
+        <div class="small-width center">
+          <a class="link"
+             href="tencent://message/?uin=351768593&Site=&Menu=yes"
+             target="_blank">
+            <i class="tiny">
+              <qq-circle-filled/>
+            </i>
+            QQ
+          </a>
+        </div>
+
+        <div class="small-width center">
+          <a class="link"
+             href="https://github.com/FirokOtaku"
+             target="_blank">
+            <i class="tiny">
+              <github-filled/>
+            </i>
+            GitHub
+          </a>
+        </div>
+
+        <div class="small-width center">
+          <a class="link"
+             href="https://steamcommunity.com/id/s2lab_firok/"
+             target="_blank">
+            <i class="tiny" v-html="SteamSvg.default">
+            </i>
+            Steam
+          </a>
+        </div>
+
+        <div class="tiny-space"></div>
+      </div>
+
+      <hr>
+
+      <div class="small-padding">
+
+      </div>
+    </article>
+
+    <article class="fill medium-width medium-elevate center center-align">
+
+      <a href="https://icp.gov.moe/?keyword=20231551">
+        <div class="small-text">
+          <img class="tiny" src="/moe-icp-mark.png" alt="Moe ICP logo">
+          萌ICP备20231551号
+        </div>
+      </a>
 
     </article>
 
@@ -114,5 +122,6 @@ import {
   GithubFilled,
   MailOutlined,
 } from '@ant-design/icons-vue'
+
 
 </script>
