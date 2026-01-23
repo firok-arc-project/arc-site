@@ -114,12 +114,12 @@
 import {dataAllTag, mapAllTag, dataTimelineIndexingPage0, TagInfo} from '@/data/data-store.ts'
 import {computed} from 'vue'
 import AsyncView from '../async-view/AsyncView.vue'
-import {TagData} from '@firok-arc-project/arc-centrifuge/src/types/tag-data-def'
-import {IndexingPage} from '@firok-arc-project/arc-centrifuge/src/types/indexing-data-def'
+import type {TagData} from '@firok-arc-project/arc-centrifuge/src/types/tag-data-def'
+import type {IndexingPage} from '@firok-arc-project/arc-centrifuge/src/types/indexing-data-def'
 import PaginationView from '@/components/pagination-view/PaginationView.vue'
-import {FetchedDocMeta, FetchedIndexingPage} from '@firok-arc-project/arc-connector/src/connector-def'
+import type {FetchedDocMeta, FetchedIndexingPage} from '@firok-arc-project/arc-connector/src/connector-def'
 import {useRouter} from 'vue-router'
-import {DocMeta} from '@firok-arc-project/arc-centrifuge/src/types/doc-meta-def'
+import type {DocMeta} from '@firok-arc-project/arc-centrifuge/src/types/doc-meta-def'
 
 const dataTimeline0recordCount = computed(() => {
   const data = dataTimelineIndexingPage0.value.data as IndexingPage & FetchedIndexingPage
@@ -147,7 +147,7 @@ const listTag = computed(() => {
 })
 
 const router = useRouter()
-async function onClickDoc(docMeta: FetchedDocMeta & DocMeta): void
+async function onClickDoc(docMeta: FetchedDocMeta & DocMeta): Promise<void>
 {
   const docId = docMeta.id
   await router.push({

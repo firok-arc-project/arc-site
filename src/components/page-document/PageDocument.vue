@@ -13,18 +13,20 @@
       </template>
 
       <template #loaded="{ data } : { data: DocData }">
-        <div>
+        <div class="">
           <div>
             {{ data.docMeta }}
           </div>
 
-          <marked-area :content="data.docContent ?? 'empty'" safe>
-            <template #image="{ href, title, }">
-              <div>
-                <img :src="resolve(href)" :alt="title">
-              </div>
-            </template>
-          </marked-area>
+          <div class="large-width auto-margin">
+            <marked-area :content="data.docContent ?? 'empty'" safe>
+              <template #image="{ token } : { token: MarkdownToken }">
+                <div>
+                  <img :src="resolve(token.attrs.src)" :alt="token.attrs.alt">
+                </div>
+              </template>
+            </marked-area>
+          </div>
         </div>
       </template>
 
@@ -54,15 +56,16 @@
 <script setup lang="ts">
 
 import {onMounted, ref, watch} from 'vue'
-import {AsyncData} from '@/data/async-data-def'
-import {DocMeta} from '@firok-arc-project/arc-centrifuge/src/types/doc-meta-def'
-import {FetchedDocMeta} from '@firok-arc-project/arc-connector/src/connector-def'
+import type {AsyncData} from '@/data/async-data-def'
+import type {DocMeta} from '@firok-arc-project/arc-centrifuge/src/types/doc-meta-def'
+import type {FetchedDocMeta} from '@firok-arc-project/arc-connector/src/connector-def'
 import {useRoute, useRouter} from 'vue-router'
 import { ajax, ajaxBaseUrlDoc, } from '../../data/data-store.js'
 import {buildAsync, loadAsync} from '@/data/async-data.ts'
 import AsyncView from '@/components/async-view/AsyncView.vue'
 import {MarkedArea} from 'mosoul/src/components/marked-area/marked-area.ts'
 import { default as matter } from 'gray-matter'
+import type {MarkdownToken} from 'mosoul/src/components/marked-area/markdown-token-def'
 
 interface DocData
 {

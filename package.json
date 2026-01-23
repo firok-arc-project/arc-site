@@ -21,7 +21,8 @@
 		"axios": "^1.13.2",
 		"beercss": "^3.13.1",
 		"lib-opal": "^0.5.0",
-		"mosoul": "^0.31.0",
+		"markdown-it": "^14.1.0",
+		"mosoul": "^0.41.0",
 		"vue": "^3.5.25",
 		"vue-router": "^4.6.3"
 	},
@@ -35,7 +36,7 @@
 		"npm-run-all2": "^8.0.4",
 		"typescript": "~5.9.0",
 		"vite": "^7.2.4",
-		"vite-plugin-node-polyfills": "^0.24.0",
+		"vite-plugin-node-polyfills": "^0.25.0",
 		"vite-plugin-vue-devtools": "^8.0.5",
 		"vue-tsc": "^3.1.5",
 		"wrangler": "^4.54.0"
